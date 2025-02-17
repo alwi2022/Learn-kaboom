@@ -14,23 +14,35 @@
       }
 
       body {
-        font-family: monogram, monospace;
-        font-size: 2rem;
-        overflow: hidden;
-      }
+  font-family: monogram, monospace;
+  font-size: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
 
-      #app {
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
+#app {
+  width: 80vw; /* 80% dari lebar viewport */
+  height: 80vh; /* 80% dari tinggi viewport */
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 
       #textbox {
         position: absolute;
         left: 10%;
         right: 10%;
         bottom: 2vh;
-        min-height: 10vh;
+        min-height: 5vh;
         background: white;
         border-radius: 3px;
         outline-style: solid;
@@ -43,6 +55,7 @@
         word-spacing: 0.2rem;
         filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
         /* overflow: auto; */
+      
       }
 
       .ui-text {
@@ -80,10 +93,13 @@
           <div id="textbox">
             <p id="dialogue" class="ui-text"></p>
             <div class="btn-container">
-              <button id="close" class="ui-close-btn">Close</button>
+              <button id="prev" class="ui-close-btn" style="display: none">Prev</button>
+              <button id="next" class="ui-close-btn"> Next</button>
+              <button id="close" class="ui-close-btn" style="display: none">Close</button>
             </div>
           </div>
         </div>
+        
       </div>
       <canvas id="game"></canvas>
     </div>

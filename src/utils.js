@@ -1,46 +1,56 @@
-export function displayDialogue(text, onDisplayEnd) {
-    const dialogueUI = document.getElementById("textbox-container");
-    const dialogue = document.getElementById("dialogue");
-  
-    dialogueUI.style.display = "block";
-    let index = 0;
-    let currentText = "";
-    const intervalRef = setInterval(() => {
-      if (index < text.length) {
-        currentText += text[index];
-        dialogue.innerHTML = currentText;
-        index++;
-        return;
-      }
-  
-      clearInterval(intervalRef);
-    }, 1);
-  
-    const closeBtn = document.getElementById("close");
-  
-    function onCloseBtnClick() {
-      onDisplayEnd();
-      dialogueUI.style.display = "none";
-      dialogue.innerHTML = "";
-      clearInterval(intervalRef);
-      closeBtn.removeEventListener("click", onCloseBtnClick);
-    }
-  
-    closeBtn.addEventListener("click", onCloseBtnClick);
-  
-    addEventListener("keypress", (key) => {
-      if (key.code === "Enter") {
-        closeBtn.click();
-      }
-    });
+export function displayDialogue(fullText, onDisplayEnd) {
+  const dialogueUI = document.getElementById("textbox-container");
+  const dialogue = document.getElementById("dialogue");
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
+  const closeBtn = document.getElementById("close");
+
+  dialogueUI.style.display = "block"; // Munculkan textbox
+
+  let sentences = splitTextByBreaks(fullText); // Pisahkan teks sesuai dengan `<br><br>`
+  let pageIndex = 0;
+
+  function updateDialogue() {
+    dialogue.innerHTML = sentences[pageIndex];
+    prevBtn.style.display = pageIndex > 0 ? "inline-block" : "none";
+    nextBtn.style.display = pageIndex < sentences.length - 1 ? "inline-block" : "none";
+    closeBtn.style.display = pageIndex === sentences.length - 1 ? "inline-block" : "none";
   }
-  
-  export function setCamScale(k) {
-    const resizeFactor = k.width() / k.height();
-    if (resizeFactor < 1) {
-      k.camScale(k.vec2(1));
-    } else {
-      k.camScale(k.vec2(1.5));
+
+  nextBtn.onclick = () => {
+    if (pageIndex < sentences.length - 1) {
+      pageIndex++;
+      updateDialogue();
     }
-  }
-  
+  };
+
+  prevBtn.onclick = () => {
+    if (pageIndex > 0) {
+      pageIndex--;
+      updateDialogue();
+    }
+  };
+
+  closeBtn.onclick = () => {
+    onDisplayEnd();
+    dialogueUI.style.display = "none";
+    pageIndex = 0;
+  };
+
+  updateDialogue();
+}
+
+/**
+ * Fungsi untuk membagi teks berdasarkan tag `<br><br>` agar tetap rapi.
+ */
+function splitTextByBreaks(text) {
+  return text.split("<br><br>").map((segment) => segment.trim() + "<br><br>");
+}
+
+
+
+export function setCamScale(k) {
+  const scale = Math.min(k.width() / 800, k.height() / 600); // 800x600 bisa disesuaikan
+  k.camScale(k.vec2(scale));
+}
+

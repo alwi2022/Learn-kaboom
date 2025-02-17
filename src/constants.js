@@ -1,23 +1,65 @@
 export const scaleFactor = 4;
 
 export const dialogueData = {
-  pc: `This is my PC. I work mostly in JavaScript/TypeScript these days.
-    I've made a couple of games in that language. I also like Golang and Python. Anyway regardless of the language, I just like programming.
-    Here is my <a href="https://github.com/jslegenddev" target="_blank">Github</a>!`,
-  "cs-degree": `This is my CS degree. I hung it on the wall because I'm proud of it. It was a very theoretical degree but I think it gave me a good foundation.`,
-  "sofa-table": `That's my sofa. I like to relax here and watch YouTube. 
-  I also make game programming tutorials on YouTube. Go sub to <a href="https://youtube.com/@jslegenddev" target="_blank">my channel</a>! (If you like the content)
-  You'll learn how I built this portfolio you're currently playing through!`,
-  tv: `That's my TV. I've been watching tech youtubers a lot recently like :
-   <a href="https://www.youtube.com/@ThePrimeTimeagen" target="_blank">Theprimeagen</a>, <a href="https://www.youtube.com/@t3dotgg" target="_blank">Theo - t3.gg</a>,
-  <a href="https://www.youtube.com/@PirateSoftware" target="_blank">PirateSoftware</a> (sometimes) and <a href="https://www.youtube.com/@MelkeyDev" target="_blank">Melkey</a>!`,
-  bed: `This where I sleep. Great ideas comes when I'm lying on my bed. When an idea strikes, I often have to write it down or else I won't be able to sleep because my mental energy is consumed by it.`,
-  resume: `This is my desk and on it is my resume. <a href="https://github.com/JSLegendDev/Resume/blob/main/JSLegend%20Resume-1.pdf" target="_blank">Check it out?</a>
-  Contact me at jslegend@protonmail.com if you have any interesting job opportunities!`,
-  projects: `Info about this portfolio : It's made with the Kaboom.js library which is a library for making games in JavaScript.
-  Text is rendered with HTML/CSS. So the textbox you're currently reading is not rendered within canvas. Learn more about how to use
-  Kaboom.js by watching some of my tutorials <a href="https://youtube.com/@jslegenddev" target="_blank">here</a>.`,
-  library: `There are a lot of programming books on my shelves. There is even one in French (I also speak French btw).
-  I probably only read one of them. Who else compulsively buys technical books without ever finishing them?`,
-  exit: `If you want to exit JSLegendDev's portfolio, just close the tab.`,
+  education: `🎓 <b>Education & Learning:</b><br><br>
+  - <b>Hacktiv8 (Full Stack JavaScript Immersive Program)</b> - Graduated Feb 2025 🎉<br>
+  - <b>Vocational High School Nurul Huda Baros (Multimedia)</b> - 2020 - 2023<br>
+  - <b>Basic English Course Pare (English)</b> - Sep 2023 - Feb 2024<br><br>
+  I believe learning never stops! Constantly exploring new frameworks, tools, and best practices. 🔍`,
+
+  skills: `🛠 <b>Technical Skills & Expertise:</b><br><br>
+  - <b>Programming Languages:</b> JavaScript, TypeScript<br>
+  - <b>Frontend:</b> React JS, React Native, Next.js, Vite, Tailwind CSS, Apollo Client, Bootstrap<br>
+  - <b>Backend:</b> Node.js, Express, PostgreSQL, MongoDB, GraphQL, REST API, JWT OAuth<br>
+  - <b>DevOps & Tools:</b> AWS, Jest, Supertest, Zod, Axios, Socket.IO, Postman, Vercel, Ngrok, Firebase<br>
+  - <b>Favorite Tools:</b> VS Code, Notion<br>
+  - <b>Soft Skills:</b> Problem-solving, Team Collaboration, Adaptability, Critical Thinking<br><br>
+  Always eager to learn new tech stacks and improve my coding skills.`,
+
+  projects: `💻 <b>Notable Projects:</b><br><br>
+  - <b>Maneka (Feb 2025):</b> AI-driven career planning app<br>
+    <i>Tech Stack: React Native, OpenAI, MongoDB, Jest, AWS</i><br><br>
+  - <b>GalaxyComputer (Jan 2025):</b> eCommerce platform<br>
+    <i>Tech Stack: React, Firebase, PostgreSQL, Express, Midtrans</i><br><br>
+  - <b>TapZapRace (Jan 2025):</b> Multiplayer racing game<br>
+    <i>Tech Stack: React, Socket.IO, Tailwind CSS</i><br><br>
+  - <b>Agres.Id (Jan 2025):</b> Computer store eCommerce site<br>
+    <i>Tech Stack: Next.js, MongoDB, Vercel, SEO Optimization</i><br><br>
+  - <b>Mobile App Line (Jan 2025):</b> A mobile messaging app<br>
+    <i>Tech Stack: React Native, Expo, Apollo, MongoDB, Redis</i><br><br>
+  - <b>Personal Portfolio (Feb 2025):</b> My interactive portfolio built with Kaboom.js & React 🎮<br><br>
+  Continuously working on side projects to enhance my technical skills and creativity. 💡`,
+
+  certifications: `📜 <b>Certifications & Achievements:</b><br><br>
+  - <b>Dicoding:</b><br>
+    - Web Programming Basics (HTML, CSS, Flexbox) - Expires: June 2026<br>
+    - Belajar Back-End Pemula dengan JavaScript - Expires: April 2027<br>
+    - Belajar Membuat Front-End Web untuk Pemula - Expires: April 2027<br><br>
+  - <b>Hackerrank:</b><br>
+    - Problem Solving (Basic)<br>
+    - SQL (Basic)<br>
+    - React (Basic)<br>
+    - JavaScript (Basic)<br>
+    - CSS (Basic)<br><br>
+  - <b>Hacktiv8 Graduation Certificate:</b> Full Stack JavaScript Immersive Program <br><br>
+  Keep pushing forward and achieving new milestones! 🌟`,
+
+  contact: `📬 <b>Let's Connect & Collaborate!</b><br><br>
+  - 📧 <b>Email:</b> imamabahrialwi21@gmail.com<br>
+  - 📞 <b>Phone:</b> +62 895 6182 16004<br>
+  - 🔗 <b>LinkedIn:</b> <a href='https://www.linkedin.com/in/imam-bahri-alwi-019816250/' target='_blank'>My LinkedIn</a><br>
+  - 🖥 <b>GitHub:</b> <a href='https://github.com/alwi2022' target='_blank'>My GitHub</a><br>
+  - 🌍 <b>Website:</b> <a href='https://portfolio-website-imambahrialwi-ew5p9kp7o.vercel.app/' target='_blank'>My Portfolio</a><br><br>
+  Let's build something awesome together! `,
+
+  resume: `📄 <b>Download My Resume:</b><br><br>
+  - <a href='/public/Imambahrialwi%20CV%20(2).docx' target='_blank'>My Resume</a><br><br>
+  Get a detailed view of my experiences, projects, and skills!`,
+
+  bed: `🛏 <b>Resting & Reflection Zone:</b><br><br>
+  - Sometimes, stepping away from the screen is the best debugging strategy! 😴`,
+
+  sofaTable: `☕ <b>Creative & Brainstorming Zone:</b><br><br>
+  - This is where great ideas come to life!<br>
+  - Whether it's sketching app designs, writing new features, or debugging tricky issues, creativity flows best here.`,
 };

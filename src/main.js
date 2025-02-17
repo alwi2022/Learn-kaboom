@@ -57,10 +57,9 @@ k.scene("main", async () => {
         if (boundary.name) {
           player.onCollide(boundary.name, () => {
             player.isInDialogue = true;
-            displayDialogue(
-              dialogueData[boundary.name],
-              () => (player.isInDialogue = false)
-            );
+            displayDialogue(dialogueData[boundary.name], () => {
+              player.isInDialogue = false;
+            });
           });
         }
       }
@@ -81,6 +80,20 @@ k.scene("main", async () => {
       }
     }
   }
+
+  // Saat pertama kali spawn, tampilkan perkenalan
+  player.isInDialogue = true; // Mencegah player bergerak saat intro
+  displayDialogue(
+    `👋 Welcome to the world of Imam Bahri Alwi! 
+  I am a Software Developer who loves building interactive applications.<br><br>  
+
+  Explore this space to find out more about me, my projects, and how we can collaborate! 
+
+   Use the mouse to move and click on objects to view information.`,
+    () => {
+      player.isInDialogue = false; // Setelah dialog selesai, player bisa bergerak
+    }
+  );
 
   setCamScale(k);
 

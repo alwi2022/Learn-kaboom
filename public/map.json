@@ -236,7 +236,7 @@
                 {
                  "height":17.4119318181818,
                  "id":23,
-                 "name":"sofa-table",
+                 "name":"sofaTable",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -247,7 +247,7 @@
                 {
                  "height":23.399209486166,
                  "id":26,
-                 "name":"tv",
+                 "name":"contact",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -258,7 +258,7 @@
                 {
                  "height":22.8125,
                  "id":29,
-                 "name":"pc",
+                 "name":"skills",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -269,7 +269,7 @@
                 {
                  "height":14.117527173913,
                  "id":30,
-                 "name":"cs-degree",
+                 "name":"certifications",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -313,7 +313,7 @@
                 {
                  "height":7.03125,
                  "id":34,
-                 "name":"library",
+                 "name":"education",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -365,7 +365,7 @@
  "nextobjectid":36,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.2",
  "tileheight":16,
  "tilesets":[
         {
